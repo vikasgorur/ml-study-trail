@@ -50,3 +50,28 @@ To avoid this, set aside a portion of the training data for *validation*, and on
 **Cross-validation**: A more sophisticated technique for splitting data into multiple training and test datasets.
 
 Don't tweak the knobs too much!
+
+**Validation and test data size**:
+
+*The rule of 30*: If a change affects atleast 30 examples, the change made to the model is statistically significant.
+
+If the validation set size is > 30,000 examples, a 0.1% change in performance is significant.
+
+Getting more data always helps.
+
+### Stochastic Gradient Descent
+
+**Rule of thumb**: If computing the loss function takes n FLOPs, computing the gradient takes 3n FLOPs.
+
+It is time consuming to compute the actual gradient when you have lots of data. Instead, use a *terrible* estimate: compute the gradient using only a tiny sample (1 to 1000) of the training data.
+
+Take small steps and lots of steps.
+
+SGD is a bad optimizer but the only one that is practical.
+
+#### Helping SGD
+
+**Momentum**: Instead of gradient at current step, use a moving average.
+
+**Learning rate decay**: Make the learning rate smaller as training steps increase.
+
