@@ -23,9 +23,19 @@ We want the classifier to be less sure in the beginning and grow confident as it
 
 **One-hot encoding**: A vector where only the correct class has value 1, all others are 0.
 
-**Cross-entropy**: A function that is used to measure the error (loss function).
+**Cross-entropy**: A function that is used to measure the error.
 
 See [this blog post](http://colah.github.io/posts/2015-09-Visual-Information/) for extensive background on cross-entropy and information theory.
 
 Cross entropy is a smooth function.
+
+**Loss function**: The loss function is the average of the cross-entropy across all training examples. Our goal is to minimize the loss function.
+
+### Numerical stability
+
+Don't add very small numbers to very big numbers.
+
+Try to keep everything with mean 0 and equal variance.
+
+Initialize the weights such that they are normally distributed and have a small standard deviation.
 
