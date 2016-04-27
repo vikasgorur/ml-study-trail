@@ -23,3 +23,6 @@ We want the classifier to be less sure in the beginning and grow confident as it
 
 **One-hot encoding**: A vector where only the correct class has value 1, all others are 0.
 
+**Cross-entropy**: A function that is used to measure the error (loss function).
+
+See 
