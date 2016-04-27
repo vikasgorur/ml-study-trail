@@ -39,3 +39,11 @@ Try to keep everything with mean 0 and equal variance.
 
 Initialize the weights such that they are normally distributed and have a small standard deviation.
 
+## Measuring Performance
+
+The classifier will try to "memorize" the training set (overfitting).
+
+**subtle**: If you train many models and tweak parameters using the same test data, the model gets information about the test data through you! This will cause overfitting.
+
+To avoid this, set aside a portion of the training data for *validation*, and only use this to make adjustments to the model. Always measure performance using the test data.
+
