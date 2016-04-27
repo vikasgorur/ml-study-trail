@@ -26,3 +26,6 @@ We want the classifier to be less sure in the beginning and grow confident as it
 **Cross-entropy**: A function that is used to measure the error (loss function).
 
 See [this blog post](http://colah.github.io/posts/2015-09-Visual-Information/) for extensive background on cross-entropy and information theory.
+
+Cross entropy is a smooth function.
+
