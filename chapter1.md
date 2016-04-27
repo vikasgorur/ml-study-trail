@@ -1,5 +1,8 @@
 # The Big Picture
 
-Mathematically, machine learning is a problem of *function approximation*.
+The goal of machine learning is to discover a function $$F$$ that maps an input vector **x** to an output vector **y**.
 
-The input and output of a machine learning task are both vectors. Our job is to learn a function ``f`` that maps inputs to outputs.
+$$F(\mathbf{x}) = \mathbf{y}$$
+
+The components of **x** are called *features*. Machine learning problems can require anywhere from a dozen to tens of thousands of features.
+
