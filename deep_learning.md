@@ -21,3 +21,5 @@ If all inputs are divided by 10, the probabilities get closer to each other.
 
 We want the classifier to be less sure in the beginning and grow confident as it looks at more data.
 
+**One-hot encoding**: A vector where only the correct class has value 1, all others are 0.
+
