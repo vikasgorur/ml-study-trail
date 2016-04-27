@@ -48,3 +48,5 @@ The classifier will try to "memorize" the training set (overfitting).
 To avoid this, set aside a portion of the training data for *validation*, and only use this to make adjustments to the model. Always measure performance using the test data.
 
 **Cross-validation**: A more sophisticated technique for splitting data into multiple training and test datasets.
+
+Don't tweak the knobs too much!
