@@ -19,3 +19,8 @@ The softmax function is used to turn a n-dimensional vector of real numbers into
 $$s(z_j) = \frac{e^{z_j}}{{\sum\limits_{k=1}^n} e^{z_k}}$$
 
 Softmax is often used in the output layer of a neural network.
+
+## Loss functions
+[Visual information theory](http://colah.github.io/posts/2015-09-Visual-Information/)
+
+The above blog post explains cross-entropy.
