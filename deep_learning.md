@@ -13,3 +13,11 @@ Classification can be used as the basis for other tasks like detection (e.g., de
 $$\mathbf{WX} + \mathbf{b} = \mathbf{y}$$
 
 The softmax function is used to turn the output vector into a vector of probabilities that sum of 1.
+
+### Input scale
+If all inputs to softmax are multiplied by 10, the probabilities get more extreme (closer to 0 or 1).
+
+If all inputs are divided by 10, the probabilities get closer to each other.
+
+We want the classifier to be less sure in the beginning and grow confident as it looks at more data.
+
