@@ -75,3 +75,8 @@ SGD is a bad optimizer but the only one that is practical.
 
 **Learning rate decay**: Make the learning rate smaller as training steps increase.
 
+**Parameter hyperspace**: How quickly the model learns has nothing to do with how well it performs.
+
+*Always lower your learning rate*.
+
+**ADAGRAD**: does automatic tweaking of hyperparameters.
