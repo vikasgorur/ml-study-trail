@@ -6,7 +6,7 @@
 ## Probability
 **(Chapter 1)**
 
-The **sample space** $$\Omega$$ is the set of all possible outcomes of an experiment. Subsets of $$\Omega$$ are called **events**.
+The **sample space** $$\Omega$$ is the set of all possible outcomes of an experiment. Subsets of $$\Omega$$ are called **events**. $$A_1, A_2, ..., A_k$$ is called a **partition** if their union is $$\Omega$$.
 
 **Lemma**: For any events $$A$$ and $$B$$,
 
