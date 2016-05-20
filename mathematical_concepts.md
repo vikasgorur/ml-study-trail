@@ -16,7 +16,6 @@ $$s(t) = \frac{1}{1 + e^-t}$$
 #### Softmax
 The softmax function is used to turn a n-dimensional vector of real numbers into a vector of probabilities that sum to 1.
 
-$$s(z_j) = \frac{e^{z_j}}{{\sum\limits_{k=1}^n} e^{z_k}}$$
 
 Softmax is often used in the output layer of a neural network.
 
