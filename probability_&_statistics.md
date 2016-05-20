@@ -80,15 +80,6 @@ $$f_X(x) = \sum_{x}f(x, y)$$
 
 We are summing over all values of the other variable ($$Y$$). This can be used to define conditional mass functions as well.
 
-### Multivariate Distributions
-
-*TODO if needed*
-
-Let $$X = (X_1, X_2, ..., X_n)$$ be a **random vector**.
-
-**Multinomial Distribution**
-**Multivariate Normal**
-
 ### Transformations of Random Variables
 Let $$X$$ be a random variable with the CDF $$Y = F_X(x)$$. We know that $$Y$$, being a probability takes on values between 0 and 1. Thus if we wanted to generate samples of $$X$$ we can derive them from samples of $$Y$$ via:
 
@@ -185,3 +176,16 @@ where $$\mu(x) = E(Y | X = x)$$
 $$E(e^{tX}) = \int e^{tx} \, dF(x) $$
 
 $$e^{tX}$$ can be written as an infinite series (Taylor expansion) whose successive coefficients are the moments of $$X$$. See [here](https://en.wikipedia.org/wiki/Moment-generating_function) for more details.
+
+## Convergence
+
+**The Law of Large Numbers**: The sample mean of a variable $$X$$ approaches $$E(X) = \mu$$ as the sample size gets larger.
+
+### The Central Limit Theorem
+
+For any random variable $$X$$, the sample mean $$\bar{X}$$ has a distribution that is approximately normal with mean $$\mu$$ and variance $$\sigma^2/n$$. In other words,
+
+$$\dfrac{\sqrt{n} \, (\bar{X_n} - \mu)}{\sigma} \to Z$$
+
+where $$Z \sim N(0, 1)$$
+
