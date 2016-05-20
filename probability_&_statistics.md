@@ -83,10 +83,27 @@ $$f_X(x) = \sum_{x}f(x, y)$$
 We are summing over all values of the other variable ($$Y$$). This can be used to define conditional mass functions as well.
 
 ### Multivariate Distributions
+
+*TODO if needed*
+
 Let $$X = (X_1, X_2, ..., X_n)$$ be a **random vector**.
 
-TODO
 **Multinomial Distribution**
 **Multivariate Normal**
 
 ### Transformations of Random Variables
+Let $$X$$ be a random variable with the CDF $$Y = F_X(x)$$. We know that $$Y$$, being a probability takes on values between 0 and 1. Thus if we wanted to generate samples of $$X$$ we can derive them from samples of $$Y$$ via:
+
+$$x = F^{-1}(y)$$
+
+## Expectation
+**(Chapter 3)**
+
+**Definition**: The **expected value**, **mean**, or **first moment** of a random variable $$X$$ is defined as:
+
+$$E(X) = \sum_{x}x \, f(x)$$ (discrete)
+$$E(X) = \int x \, f(x) dx$$ (continuous)
+
+The expected value (mean) can sometimes not exist!
+
+For the Cauchy distribution defined by $$f(x) = \frac{1}{\pi (1 + x^2)}$$, the mean diverges to $$\infty$$. This means that if you take a number of observations, the mean never settles down.
