@@ -4,7 +4,6 @@
 
 
 ## Probability
-**(Chapter 1)**
 
 The **sample space** $$\Omega$$ is the set of all possible outcomes of an experiment. Subsets of $$\Omega$$ are called **events**. $$A_1, A_2, ..., A_k$$ is called a **partition** if their union is $$\Omega$$.
 
@@ -33,7 +32,6 @@ $$P(AB) = P(A|B)\,P(B)$$
 $$P(A_i|B) = \dfrac{P(B|A_i) \, P(A_i)}{\Sigma_j P(B|A_j) \, P(A_j)} $$
 
 ## Random Variables
-**(Chapter 2)**
 
 **Definition**: A **random variable** is a mapping that assigns a real number $$X(\omega)$$ to each outcome in $$\Omega$$.
 
@@ -97,13 +95,93 @@ Let $$X$$ be a random variable with the CDF $$Y = F_X(x)$$. We know that $$Y$$, 
 $$x = F^{-1}(y)$$
 
 ## Expectation
-**(Chapter 3)**
 
 **Definition**: The **expected value**, **mean**, or **first moment** of a random variable $$X$$ is defined as:
 
 $$E(X) = \sum_{x}x \, f(x)$$ (discrete)
+
 $$E(X) = \int x \, f(x) dx$$ (continuous)
 
 The expected value (mean) can sometimes not exist!
 
 For the Cauchy distribution defined by $$f(x) = \frac{1}{\pi (1 + x^2)}$$, the mean diverges to $$\infty$$. This means that if you take a number of observations, the mean never settles down.
+
+**Theorem (The Rule of the Lazy Statistician)**: Let $$Y = r(X)$$. Then,
+
+$$E(Y) = E(r(X)) = \int r(x) \, dF_{X}(x)$$
+
+**Explanation:** This is better written as
+
+$$E(r(X)) = \int r(x) \, f_X(x) dx$$
+
+See [Law of the unconscious statistician](https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician) for more details.
+
+### Properties of Expectations
+
+If $$X_1, X_2, ..., X_n$$ are random variables and $$a_1, a_2, ..., a_n$$ are constants,
+
+$$E(\sum_i a_iX_i) = \sum_i a_i E(X_i)$$
+
+Let $$X_1, X_2, ..., X_n$$ be **independent** random variables. Then,
+
+$$E(\prod_{i=1}^{n} X_i) = \prod_i E(X_i)$$
+
+### Variance and Covariance
+
+**Definition**: Let $$X$$ be a random variable with mean $$\mu$$. The **variance** of $$X$$ is defined by
+
+$$V(X) = \sigma^2 = E[(X - \mu)^2] = \int(x - \mu)^2 dF(x)$$
+
+$$\sigma = \sqrt{V(X)}$$ is the standard deviation.
+
+**Properties of variance**:
+
+  1. $$V(X) = E(X^2) - \mu^2$$
+  2. If a and b are constants then $$V(aX + b) = a^2V(X)$$
+
+**Definition**: Let $$X$$ and $$Y$$ be random variables with means $$\mu_X$$ and $$\mu_Y$$ and standard deviations $$\sigma_X$$ and $$\sigma_Y$$. Define the **covariance** by:
+
+$$Cov(X, Y) = E((X - \mu_X)(Y - \mu_Y))$$
+
+and the **correlation** by:
+
+$$\rho(X, Y) = \dfrac{Cov(X, Y)}{\sigma_X\sigma_Y}$$
+
+The covariance satisfies
+
+$$Cov(X, Y) = E(XY) - E(X)E(Y)$$
+
+The correlation is a scaled version of the covariance and satisfies
+
+$$-1 \le \rho(X, Y) \le 1$$
+
+**Definition**: If $$X$$ is a random vector, the **covariance matrix** $$\Sigma$$ is defined by
+
+$$\Sigma_{i, j} = Cov(X_i, X_j)$$ when $$i \ne j$$
+$$\Sigma_{i, j} = V(X_i)$$ when $$i = j$$
+
+### Conditional Expectation
+
+If $$X$$ and $$Y$$ are random variables, the mean of $$X$$ among those times when $$Y = y$$ is given by
+
+$$E(X|Y = y) = \int x \, f_{X|Y}(x|y) \, dx$$
+
+**Iterated Expectations**: For random variables $$X$$ and $$Y$$,
+
+$$E[E(Y|X)] = E(Y)$$
+
+$$E[E(X|Y)] = E(X)$$
+
+**Definition**: The **conditional variance** is defined by
+
+$$V(Y|X = x) = \int (y - \mu(x))^2 \, f(y|x) \, dy$$
+
+where $$\mu(x) = E(Y | X = x)$$
+
+### Moment Generating Functions
+
+**Definition**: The **moment generating function** (also called Laplace transform) of $$X$$ is defined by
+
+$$E(e^{tX}) = \int e^{tx} \, dF(x) $$
+
+$$e^{tX}$$ can be written as an infinite series (Taylor expansion) whose successive coefficients are the moments of $$X$$. See [here](https://en.wikipedia.org/wiki/Moment-generating_function) for more details.
