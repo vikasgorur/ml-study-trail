@@ -16,6 +16,7 @@ $$s(t) = \frac{1}{1 + e^-t}$$
 #### Softmax
 The softmax function is used to turn a n-dimensional vector of real numbers into a vector of probabilities that sum to 1.
 
+
 Softmax is often used in the output layer of a neural network.
 
 ## Loss functions
