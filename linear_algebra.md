@@ -2,6 +2,12 @@
 
 **Reference book**: [Linear Algebra Done Right](http://linear.axler.net/), Sheldon Axler.
 
+**Blog posts**:
+
+[Linear Algebra, A Primer](https://jeremykun.com/2011/06/19/linear-algebra-a-primer/), Jeremy Kun.
+
+[Inner Product Spaces, A Primer](https://jeremykun.com/2011/07/25/inner-product-spaces-a-primer/), Jeremy Kun.
+
 ## Vector spaces
 A **vector** $$x$$ is a list of elements from a **field** $$F$$. We are only interested in the fields $$R$$ (real numbers) and $$C$$ (complex numbers).
 
