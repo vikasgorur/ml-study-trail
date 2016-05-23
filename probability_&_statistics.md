@@ -76,12 +76,23 @@ $$f_X(x, y) = P(X = x, Y = y)$$
 
 The joint function can be "curried" to obtain **marginal mass functions**. For $$X$$,
 
-$$f_X(x) = \sum_{x}f(x, y)$$
+$$f_{X,Y}(x) = \sum_{x}f(x, y)$$
 
 We are summing over all values of the other variable ($$Y$$). This can be used to define conditional mass functions as well.
 
 ### Transformations of Random Variables
-Let $$X$$ be a random variable with the CDF $$Y = F_X(x)$$. We know that $$Y$$, being a probability takes on values between 0 and 1. Thus if we wanted to generate samples of $$X$$ we can derive them from samples of $$Y$$ via:
+
+Let $$Y = r(X)$$. We wish to find the density of $$Y$$.
+
+1. For each y, find the set $$A_y = {x : r(x) \le y}$$
+2. Find the CDF:
+
+    $$F_Y(y) = P(r(X) \le y) = \int_{A_y} f_X(x) dx$$
+3. The PDF is:
+
+    $$f_Y(y) = F'_Y(y)$$
+  
+**Generating samples**: Let $$X$$ be a random variable with the CDF $$Y = F_X(x)$$. We know that $$Y$$, being a probability takes on values between 0 and 1. Thus if we wanted to generate samples of $$X$$ we can derive them from samples of $$Y$$ via:
 
 $$x = F^{-1}(y)$$
 
