@@ -72,11 +72,11 @@ The **standard normal distribution** has $$\mu = 0, \sigma = 1$$.
 ### Bivariate Distributions
 If $$X$$ and $$Y$$ are random variables, their **joint mass function** is defined as:
 
-$$f_X(x, y) = P(X = x, Y = y)$$
+$$f_{X,Y}(x, y) = P(X = x, Y = y)$$
 
 The joint function can be "curried" to obtain **marginal mass functions**. For $$X$$,
 
-$$f_{X,Y}(x) = \sum_{x}f(x, y)$$
+$$f_X(x) = \sum_{x}f(x, y)$$
 
 We are summing over all values of the other variable ($$Y$$). This can be used to define conditional mass functions as well.
 
