@@ -66,3 +66,83 @@ $$((1, 0, ..., 0), (0, 1, ..., 0), ..., (0, 0, ..., 1))$$
 Every vector in $$V$$ can be uniquely expressed as a linear combination of the basis.
 
 Every finite-dimensional vector space has a basis, and all the bases are of the same length, which is the **dimension** of that space.
+
+## Linear Maps
+
+A **linear map** from $$V$$ to $$W$$ is a function $$T: V \to W$$ with the following properties:
+
+**additivity**
+    $$T(u + v) = Tu + Tv$$
+  
+**homogeneity**
+    $$T(av) = a(Tv) \, \text{for all} \, v \in V, a \in F$$
+    
+The set of all linear maps from $$V$$ to $$W$$ is denoted by $$L(V, W)$$.
+
+**zero**: $$0v = v$$
+
+**identity**: $$Iv = v$$
+
+$$L(V, W)$$ is itself a vector space. The **product** of two maps $$ST$$ is the composition of the maps.
+
+### Null Spaces and Ranges
+
+For $$T \in L(V, W)$$, the **null space** (kernel) of $$T$$ is the subset of $$V$$ that $$T$$ maps to 0.
+
+  null $$T = \{v \in V : Tv = 0\}$$
+  
+The **range** of $$T$$ is the subset of $$W$$ that are the results of the mapping.
+
+  range $$T = \{Tv : v \in V\}$$
+  
+**Theorem**: If $$V$$ is finite dimensional and $$T \in L(V, W)$$, then range $$T$$ is a finite-dimensional subspace of $$W$$ and
+
+  dim $$V$$ = dim null $$T$$ + dim range $$T$$
+  
+### Matrices
+
+A linear map $$T: V \to W$$ from n-dimensional space $$V$$ to m-dimensional space $$W$$ is represented by an $$m \times n$$ matrix.
+
+The set of all m-by-n matrices with entries in $$F$$ is denoted $$Mat(m, n, F)$$ and is a vector space w. r. t. matrix addition and scalar multiplication.
+
+### Invertibility
+
+For a linear map $$T$$ the **inverse** ($$T^{-1}$$), if exists, is unique and defined by
+
+  $$TT^{-1} = I$$
+  
+Two vector spaces are **isomorphic** if an invertible linear map between them exists.
+
+A linear map from a vector space to itself is called an **operator**.
+
+## Eigenvalues and Eigenvectors
+
+For $$T \in L(V)$$ (operator on $$V$$) and $$U$$ a subspace of $$V$$, we say that $$U$$ is **invariant** under $$T$$ if $$u \in U \implies Tu \in U$$.
+
+For $$T \in L(V)$$, $$\lambda$$ is called the **eigenvalue** and $$u$$ is called an **eigenvector** when
+
+  $$Tu = \lambda \, u$$
+  
+In other words, the set of eigenvectors is given by
+
+  null$$(T - \lambda\,I)$$
+  
+An operator has an eigenvalue if and only if there exists a nonzero vector in its domain that gets sent by the operator to a scalar multiple of itself.
+
+**Theorem**: The eigenvectors of an operator corresponding to distinct eigenvalues are linearly independent. Each operator on $$V$$ has at most dim $$V$$ eigenvalues.
+
+**Theorem**: Every operator on a finite-dimensional, nonzero, complex vector space has an eigenvalue.
+
+### Upper-Triangular and Diagonal Matrices
+
+A matrix is upper-triangular if all entries below the diagonal are 0.
+
+**Theorem**: Suppose $$V$$ is a complex vector space and $$T \in L(V)$$. Then $$T$$ has an upper-triangular matrix with respect to some basis of $$V$$.
+
+The entries on the diagonal are the eigenvalues of $$T$$.
+
+**Theorem**: Suppose $$T \in L(V)$$. Let $$\lambda_1, \lambda_2, ..., \lambda_m$$ denote distinct eigenvalues of $$T$$. Then the following are equivalent:
+
+  1. $$T$$ has a diagonal matrix with respect to some basis of $$V$$
+  2. $$V$$ has a basis consisting of eigenvectors of $$T$$.
+  
