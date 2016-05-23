@@ -49,3 +49,20 @@ If each $$U_i$$ is a subspace of $$V$$, then the sum is also a subspace of $$V$$
 
 $$v = U_1 + U_2 + ... + U_n$$ uniquely
 
+### Span and Linear Independence
+
+A **linear combination** of vectors in $$V$$ is of the form
+
+$$a_1v_1 + a_2v_2 + ... + a_nv_n$$
+
+The **span** of a set of vectors $$v_1, v_2, ..., v_n$$ is the set of all its linear combinations. If the span equals $$V$$, we say that the set **spans** $$V$$.
+
+A list of vectors in $$V$$ is called **linearly independent** if the only way to express 0 as their linear combination is to set all $$a_1, a_2, ... a_n = 0$$.
+
+A **basis** is a list of vectors in $$V$$ that is linearly independent and spans $$V$$. The **standard basis** of $$V$$ is
+
+$$((1, 0, ..., 0), (0, 1, ..., 0), ..., (0, 0, ..., 1))$$
+
+Every vector in $$V$$ can be uniquely expressed as a linear combination of the basis.
+
+Every finite-dimensional vector space has a basis, and all the bases are of the same length, which is the **dimension** of that space.
