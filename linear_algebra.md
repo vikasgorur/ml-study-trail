@@ -152,3 +152,24 @@ The entries on the diagonal are the eigenvalues of $$T$$.
   1. $$T$$ has a diagonal matrix with respect to some basis of $$V$$
   2. $$V$$ has a basis consisting of eigenvectors of $$T$$.
   
+## Inner Product Spaces
+
+The **inner product** of two vectors $$x$$ and $$y$$ is denoted as $$\langle x, y \rangle$$. The **norm** of $$v$$ is defined using the inner product as
+
+$$\|v\| = \sqrt{\langle v, v \rangle}$$ 
+
+A vector space along with an inner product is called an **inner product space**. For $$R^n$$, the **dot product** is an example of the inner product and the corresponding norm is just the length of a vector.
+
+Two vectors $$u$$ and $$v$$ are **orthogonal** if $$\langle u, v \rangle = 0$$.
+
+**Cauchy-Schwarz Inequality**: If $$u, v \in V$$ then
+
+$$\|\langle u, v \rangle\| \le \|u\|\|v\|$$
+
+**Triangle Inequality**: If $$u, v \in V$$ then
+
+$$\|\langle u + v \rangle\| \le \|u\| + \|v\|$$
+
+### Orthonormal Bases
+A list of vectors is called **orthonormal** if the vectors in it are pairwise orthogonal and each vector has the norm 1. If the list is a basis, it is an **orthonormal basis**. The standard basis is orthonormal.
+
