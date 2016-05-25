@@ -1,6 +1,9 @@
 # Linear Algebra
 
-**Reference book**: [Linear Algebra Done Right](http://linear.axler.net/), Sheldon Axler.
+**Reference books**:
+
+[Linear Algebra Done Right](http://linear.axler.net/), Sheldon Axler.
+[Linear Algebra Done Wrong](http://www.math.brown.edu/~treil/papers/LADW/LADW.html), Sergei Treil.
 
 **Blog posts**:
 
@@ -121,6 +124,9 @@ Two vector spaces are **isomorphic** if an invertible linear map between them ex
 
 A linear map from a vector space to itself is called an **operator**.
 
+### Determinant
+If there are $$n$$ vectors $$v_1, v_2, ..., v_n$$ in $$R^n$$ (number of vectors equal to dimension), the determinant is the volume of the parallelepiped determined by those vectors.
+
 ## Eigenvalues and Eigenvectors
 
 For $$T \in L(V)$$ (operator on $$V$$) and $$U$$ a subspace of $$V$$, we say that $$U$$ is **invariant** under $$T$$ if $$u \in U \implies Tu \in U$$.
@@ -133,15 +139,17 @@ In other words, the set of eigenvectors is given by
 
   null$$(T - \lambda\,I)$$
   
+This is also called the **eigenspace** of $$T$$.
+  
 An operator has an eigenvalue if and only if there exists a nonzero vector in its domain that gets sent by the operator to a scalar multiple of itself.
 
 **Theorem**: The eigenvectors of an operator corresponding to distinct eigenvalues are linearly independent. Each operator on $$V$$ has at most dim $$V$$ eigenvalues.
 
 **Theorem**: Every operator on a finite-dimensional, nonzero, complex vector space has an eigenvalue.
 
-### Upper-Triangular and Diagonal Matrices
+### Triangular and Diagonal Matrices
 
-A matrix is upper-triangular if all entries below the diagonal are 0.
+A matrix is upper (lower) triangular if all entries below (above) the diagonal are 0.
 
 **Theorem**: Suppose $$V$$ is a complex vector space and $$T \in L(V)$$. Then $$T$$ has an upper-triangular matrix with respect to some basis of $$V$$.
 
@@ -173,3 +181,5 @@ $$\|\langle u + v \rangle\| \le \|u\| + \|v\|$$
 ### Orthonormal Bases
 A list of vectors is called **orthonormal** if the vectors in it are pairwise orthogonal and each vector has the norm 1. If the list is a basis, it is an **orthonormal basis**. The standard basis is orthonormal.
 
+## Supplements
+[Linear Algebra - the incredible beauty of math](https://www.youtube.com/watch?v=s6p864XVxeU), Margot Gerritsen.
